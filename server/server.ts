@@ -3,8 +3,7 @@ import http from 'http';
 import NodeCache from 'node-cache';
 
 // Types
-import { GameState } from '../types/gamestate';
-// abilities, items, buildings
+import { GameStateInterface } from '../src/types/gamestate';
 // Set up
 const gameCache: any = new NodeCache();
 const port = 3030;
@@ -12,7 +11,7 @@ const host = `192.168.1.80`;
 
 const server = http.createServer(
   (req: http.IncomingMessage, res: http.ServerResponse) => {
-    if (req.method == `POST`) {
+    if (req.method === `POST`) {
       let body = ``;
       res.writeHead(200, { 'Content-Type': `application/json` });
 
@@ -25,7 +24,7 @@ const server = http.createServer(
       });
     } else {
       // Usually just a GET
-      const gameState: GameState =
+      const gameState: GameStateInterface =
         gameCache.get(`gameState`) ||
         JSON.stringify({
           error: `No data in cache yet`,
@@ -41,5 +40,5 @@ const server = http.createServer(
 );
 
 server.listen(port, host);
-console.log(`Server listening on ${host}:${port}`);
-export {};
+// eslint-disable-next-line no-console
+console.info(`Server listening on ${host}:${port}`);
