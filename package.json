@@ -11,7 +11,7 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others \"next dev\" \"npx ts-node --project server/server.tsconfig.json server/server.ts\"",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",

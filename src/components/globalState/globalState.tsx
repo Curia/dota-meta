@@ -43,13 +43,12 @@ const RetrieveGamestate = ({ children }: { children: React.ReactChild }) => {
     ...args: [input: RequestInfo, init?: RequestInit | undefined]
   ) => fetch(...args).then((response) => response.json());
 
-  const { data, error } = useSWR(`http://192.168.1.80:3030`, fetcher, {
+  const { data, error } = useSWR(`/api/gameState`, fetcher, {
     refreshInterval: 2000,
   });
 
   useEffect(() => {
-    console.log(data);
-    if (data.map) {
+    if (data) {
       setState(data);
     }
   }, [data]);
