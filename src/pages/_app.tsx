@@ -1,19 +1,17 @@
 import { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
-import '@/styles/global.css';
-import {
-  GlobalStateProvider,
-  RetrieveGamestate,
-} from '@/components/globalState';
+import { ApolloProvider } from '@apollo/client';
+import { client } from '@/config/apollo';
+import { AppProvider } from '@/components/appProvider';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
-      <GlobalStateProvider>
-        <RetrieveGamestate>
+    <ApolloProvider client={client}>
+      <ChakraProvider>
+        <AppProvider>
           <Component {...pageProps} />
-        </RetrieveGamestate>
-      </GlobalStateProvider>
-    </ChakraProvider>
+        </AppProvider>
+      </ChakraProvider>
+    </ApolloProvider>
   );
 }

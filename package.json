@@ -26,10 +26,13 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "3.3.18",
     "@chakra-ui/react": "1.6.1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "apollo-codegen": "0.20.2",
     "framer-motion": "^4",
+    "graphql": "15.5.0",
     "luxon": "1.26.0",
     "next": "10.2.0",
     "node-cache": "5.1.2",
