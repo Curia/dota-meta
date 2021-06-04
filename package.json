@@ -11,7 +11,7 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "npm typegen && next dev",
+    "dev": "npm run typegen && next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
