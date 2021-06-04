@@ -17,6 +17,7 @@ export default function Home() {
         payload: data,
       });
     }
+    console.log(state.meta);
   }, [data, loading]);
 
   if (loading) return <p>Loading ...</p>;

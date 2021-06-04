@@ -1,18 +1,22 @@
 import { createContext, useReducer } from 'react';
+import { HeroesMetaTrends } from '@/apollo/__generated__/HeroesMetaTrends';
 import { metaReducer } from './reducers';
 
-type IMetaQuery = {
-  data: any;
+interface IMeta {
+  data: HeroesMetaTrends | undefined;
   initialLoad: boolean;
-};
+}
 
 type IInitialState = {
-  meta: IMetaQuery;
+  meta: {
+    data: HeroesMetaTrends | undefined;
+    initialLoad: boolean;
+  };
 };
 
 const initialState = {
   meta: {
-    data: [],
+    data: undefined,
     initialLoad: false,
   },
 };
@@ -30,7 +34,7 @@ const mainReducer = ({ meta }, action) => ({
 });
 
 const AppProvider: React.FC = ({ children }) => {
-  const [state, dispatch] = useReducer<any>(mainReducer, initialState);
+  const [state, dispatch] = useReducer(mainReducer, initialState);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>

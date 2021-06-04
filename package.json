@@ -19,7 +19,7 @@
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install",
     "gqlDownload": "npx apollo service:download --endpoint=https://api.stratz.com/graphql src/apollo/graphql-schema.json",
-    "gqlGenerate": "npx apollo codegen:generate src/types --localSchemaFile=src/apollo/graphql-schema.json --target=typescript --tagName=gql",
+    "gqlGenerate": "npx apollo codegen:generate --localSchemaFile=src/apollo/graphql-schema.json --target=typescript --tagName=gql",
     "typegen": "npm run gqlDownload && npm run gqlGenerate"
   },
   "lint-staged": {
