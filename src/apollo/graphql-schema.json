@@ -13235,8 +13235,8 @@
             "description": null,
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "Byte",
+              "kind": "ENUM",
+              "name": "Series",
               "ofType": null
             },
             "isDeprecated": false,
@@ -13258,6 +13258,42 @@
         "inputFields": null,
         "interfaces": [],
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "Series",
+        "description": null,
+        "specifiedByUrl": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "BEST_OF_ONE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "BEST_OF_THREE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "BEST_OF_FIVE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "BEST_OF_TWO",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -15482,6 +15518,18 @@
                 "deprecationReason": null
               },
               {
+                "name": "teamId",
+                "description": "A team id to include in this query, excluding all results that do not have this team id.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
                 "name": "skip",
                 "description": "The amount to skip before collecting your query. Hint: Paging",
                 "type": {
@@ -15507,9 +15555,13 @@
               }
             ],
             "type": {
-              "kind": "OBJECT",
-              "name": "FindSeriesResponseType",
-              "ofType": null
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SeriesType",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -15521,6 +15573,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Long",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stats",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "LeagueStatType",
               "ofType": null
             },
             "isDeprecated": false,
@@ -16263,8 +16327,8 @@
             "description": null,
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "Byte",
+              "kind": "ENUM",
+              "name": "LeagueNodeDefaultGroupEnum",
               "ofType": null
             },
             "isDeprecated": false,
@@ -17537,7 +17601,7 @@
             "deprecationReason": null
           },
           {
-            "name": "yeamId",
+            "name": "teamId",
             "description": "A team id to include in this query, excluding all results that do not have this team id.",
             "type": {
               "kind": "SCALAR",
@@ -17830,50 +17894,6 @@
           }
         ],
         "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "FindSeriesResponseType",
-        "description": null,
-        "specifiedByUrl": null,
-        "fields": [
-          {
-            "name": "series",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "SeriesType",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "totalSeries",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -19501,6 +19521,54 @@
           },
           {
             "name": "count",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "LeagueStatType",
+        "description": null,
+        "specifiedByUrl": null,
+        "fields": [
+          {
+            "name": "averageMatchDurationSeconds",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "matchCount",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "radiantWinMatchCount",
             "description": null,
             "args": [],
             "type": {
@@ -25952,6 +26020,30 @@
           {
             "name": "endDateTime",
             "description": "If a league is set to end before this time.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Long",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "betweenStartDateTime",
+            "description": "Determine to Start value of finding a League Between two specific datetimes.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Long",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "betweenEndDateTime",
+            "description": "Determine to End value of finding a League Between two specific datetimes.",
             "type": {
               "kind": "SCALAR",
               "name": "Long",
@@ -51027,7 +51119,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "MatchType",
+              "name": "MatchLiveType",
               "ofType": null
             },
             "isDeprecated": false,
@@ -51042,7 +51134,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "MatchType",
+                "name": "MatchLiveType",
                 "ofType": null
               }
             },

@@ -1,27 +1,16 @@
 import React, { useContext, useEffect } from 'react';
 import { AppContext } from '@/components/appProvider';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
-const GET_GREETING = gql`
-  query metaTrend {
-    heroStats {
-      winDay(bracketIds: HERALD) {
-        heroId
-        winCount
-        matchCount
-        day
-      }
-    }
-  }
-`;
+// Queries
+import { HEROES_META_TREND } from '@/apollo/queries';
 
 export default function Home() {
   const { state, dispatch } = useContext(AppContext);
 
-  const { loading, error, data } = useQuery(GET_GREETING);
+  const { loading, error, data } = useQuery(HEROES_META_TREND);
 
   useEffect(() => {
-    console.log(data);
     if (!state.meta.initialLoad) {
       dispatch({
         type: `UPDATE_META`,
