@@ -1,0 +1,27 @@
+{
+  "china": {
+    "localized_name": "China",
+    "name": "CHINA",
+    "shorthand": "CN"
+  },
+  "Europe": {
+    "localized_name": "Europe",
+    "name": "EUROPE",
+    "shorthand": "EU"
+  },
+  "northAmerica": {
+    "localized_name": "North America",
+    "name": "NORTH_AMERICA",
+    "shorthand": "NA"
+  },
+  "sea": {
+    "localized_name": "SE Asia",
+    "name": "SEA",
+    "shorthand": "SEA"
+  },
+  "southAmerica": {
+    "localized_name": "South America",
+    "name": "SOUTH_AMERICA",
+    "shorthand": "SA"
+  }
+}

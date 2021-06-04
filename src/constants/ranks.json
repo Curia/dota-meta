@@ -1,0 +1,30 @@
+{
+  "immortal": {
+    "localized_name": "Immortal",
+    "name": "IMMORTAL"
+  },
+  "divine": {
+    "localized_name": "Divine",
+    "name": "DIVINE"
+  },
+  "legend": {
+    "localized_name": "Immortal",
+    "name": "IMMORTAL"
+  },
+  "archon": {
+    "localized_name": "Archon",
+    "name": "ARCHON"
+  },
+  "crusader": {
+    "localized_name": "Crusader",
+    "name": "CRUSADER"
+  },
+  "guardian": {
+    "localized_name": "Guardian",
+    "name": "GUARDIAN"
+  },
+  "herald": {
+    "localized_name": "Herald",
+    "name": "HERALD"
+  }
+}

@@ -5,6 +5,9 @@ import { useQuery } from '@apollo/client';
 // Queries
 import { HEROES_META_TREND } from '@/apollo/queries';
 
+// Components
+import { MetaFilters } from '@/components/metaFilters';
+
 export default function Home() {
   const { state, dispatch } = useContext(AppContext);
 
@@ -17,10 +20,13 @@ export default function Home() {
         payload: data,
       });
     }
-    console.log(state.meta);
   }, [data, loading]);
 
   if (loading) return <p>Loading ...</p>;
 
-  return <h1>Data loaded</h1>;
+  return (
+    <div>
+      <MetaFilters />
+    </div>
+  );
 }
