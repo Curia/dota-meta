@@ -1,0 +1,137 @@
+{
+  "0": {
+    "id": 0,
+    "name": "NONE",
+    "balanced": true,
+    "localized_name": "None"
+  },
+  "1": {
+    "id": 1,
+    "name": "ALL_PICK",
+    "balanced": true,
+    "localized_name": "All Pick"
+  },
+  "2": {
+    "id": 2,
+    "name": "CAPTAINS_MODE",
+    "balanced": true,
+    "localized_name": "Captains Mode"
+  },
+  "3": {
+    "id": 3,
+    "name": "RANDOM_DRAFT",
+    "balanced": true,
+    "localized_name": "Random Draft"
+  },
+  "4": {
+    "id": 4,
+    "name": "SINGLE_DRAFT",
+    "balanced": true,
+    "localized_name": "Single Draft"
+  },
+  "5": {
+    "id": 5,
+    "name": "ALL_RANDOM",
+    "balanced": true,
+    "localized_name": "All Random"
+  },
+  "6": {
+    "id": 6,
+    "name": "INTRO",
+    "localized_name": "Intro"
+  },
+  "7": {
+    "id": 7,
+    "name": "THE_DIRETIDE",
+    "localized_name": "Diretide"
+  },
+  "8": {
+    "id": 8,
+    "name": "REVERSE_CAPTAINS_MODE",
+    "localized_name": "Reverse Captions Mode"
+  },
+  "9": {
+    "id": 9,
+    "name": "THE_GREEVILING",
+    "localized_name": "Greevling"
+  },
+  "10": {
+    "id": 10,
+    "name": "TUTORIAL",
+    "localized_name": "Tutorial"
+  },
+  "11": {
+    "id": 11,
+    "name": "MID_ONLY",
+    "localized_name": "Mid Only"
+  },
+  "12": {
+    "id": 12,
+    "name": "LEAST_PLAYED",
+    "balanced": true,
+    "localized_name": "Least Played"
+  },
+  "13": {
+    "id": 13,
+    "name": "NEW_PLAYER_POOL",
+    "localized_name": "New Player Pool"
+  },
+  "14": {
+    "id": 14,
+    "name": "COMPENDIUM_MATCHMAKING",
+    "localized_name": "Compendium Matchmaking" 
+  },
+  "15": {
+    "id": 15,
+    "name": "CUSTOM",
+    "localized_name": "Custom"
+  },
+  "16": {
+    "id": 16,
+    "name": "CAPTAINS_DRAFT",
+    "balanced": true,
+    "localized_name": "Captains Draft"
+  },
+  "17": {
+    "id": 17,
+    "name": "BALANCED_DRAFT",
+    "balanced": true,
+    "localized_name": "Balanced Draft"
+  },
+  "18": {
+    "id": 18,
+    "name": "ABILITY_DRAFT",
+    "localized_name": "Ability Draft"
+  },
+  "19": {
+    "id": 19,
+    "name": "EVENT",
+    "localized_name": "Event"
+  },
+  "20": {
+    "id": 20,
+    "name": "ALL_RANDOM_DEATH_MATCH",
+    "localized_name": "All Random Death Match"
+  },
+  "21": {
+    "id": 21,
+    "name": "SOLO_MID",
+    "localized_name": "Solo Mid"
+  },
+  "22": {
+    "id": 22,
+    "name": "ALL_PICK_RANKED",
+    "balanced": true,
+    "localized_name": "Ranked All Pick"
+  },
+  "23": {
+    "id": 23,
+    "name": "TURBO",
+    "localized_name": "Turbo"
+  },
+  "24": {
+    "id": 24,
+    "name": "MUTATION",
+    "localized_name": "Mutation"
+  }
+}

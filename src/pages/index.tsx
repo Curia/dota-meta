@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AppContext } from '@/components/appProvider';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-
+import { Container } from '@chakra-ui/react';
 // Queries
 import { HEROES_META_TREND } from '@/apollo/queries';
 
@@ -24,12 +23,12 @@ export default function Home() {
   });
 
   return (
-    <div>
+    <Container maxW="7xl">
       <MetaFilters
         filterValues={filterValues}
         setFilterValues={setFilterValues}
       />
       {loading ? <p>Loading ...</p> : <MetaTable data={data} />}
-    </div>
+    </Container>
   );
 }

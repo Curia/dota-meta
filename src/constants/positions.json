@@ -1,0 +1,22 @@
+{
+  "1": {
+    "localized_name": "Safe Lane",
+    "name": "POSITION_1"
+  },
+  "2": {
+    "localized_name": "Mid Lane",
+    "name": "POSITION_2"
+  },
+  "3": {
+    "localized_name": "Off Lane",
+    "name": "POSITION_3"
+  },
+  "4": {
+    "localized_name": "Soft Support",
+    "name": "POSITION_4"
+  },
+  "5": {
+    "localized_name": "Hard Support",
+    "name": "POSITION_5"
+  }
+}
