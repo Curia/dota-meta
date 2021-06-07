@@ -9,7 +9,7 @@ import { MetaFilters } from '@/components/metaFilters';
 import { MetaTable } from '@/components/metaTable';
 
 // Types
-import { IFilterValues } from '@/types/meta';
+import { IFilterValues } from '@/components/metaFilters/interfaces';
 
 export default function Home() {
   const [filterValues, setFilterValues] = useState<IFilterValues>({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, Divider } from '@chakra-ui/react';
+import { Box, Select, Divider } from '@chakra-ui/react';
 
 // Constants
 import ranks from '@/constants/ranks.json';
@@ -8,11 +8,14 @@ import positions from '@/constants/positions.json';
 import gameModes from '@/constants/gameModes.json';
 
 // Types
-import { IFilterValues } from '@/types/meta';
+import {
+  IFilterValues,
+  IGameModeJson,
+} from '@/components/metaFilters/interfaces';
 
 const MetaFilters: React.FC<{
   filterValues: IFilterValues;
-  setFilterValues: any;
+  setFilterValues: React.Dispatch<React.SetStateAction<IFilterValues>>;
 }> = ({ filterValues, setFilterValues }) => {
   const updateFilters = (
     event: React.ChangeEvent<HTMLSelectElement>,
@@ -22,8 +25,11 @@ const MetaFilters: React.FC<{
     setFilterValues({ ...filterValues, [type]: value ? [value] : [] });
   };
 
+  const gameModeIds: number[] = [1, 2, 22, 23];
+  const gameModeJson: IGameModeJson = gameModes;
+
   return (
-    <>
+    <Box my="3">
       <Select
         placeholder="All ranks"
         onChange={(e) => {
@@ -70,14 +76,14 @@ const MetaFilters: React.FC<{
         }}
         mb="3"
       >
-        {gameModeIds.map((modeId) => (
-          <option key={modeId} value={gameModes[modeId].name}>
-            {gameModes[modeId].localized_name}
+        {gameModeIds.map((modeId, key) => (
+          <option key={modeId} value={gameModeJson[modeId].name}>
+            {gameModeJson[modeId].localized_name}
           </option>
         ))}
       </Select>
       <Divider mb="3" />
-    </>
+    </Box>
   );
 };
 
