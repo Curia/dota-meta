@@ -7,6 +7,7 @@ import { HEROES_META_TREND } from '@/apollo/queries';
 // Components
 import { MetaFilters } from '@/components/metaFilters';
 import { MetaTable } from '@/components/metaTable';
+import { MostPicked } from '@/components/mostPicked';
 
 // Types
 import { IFilterValues } from '@/components/metaFilters/interfaces';
@@ -28,7 +29,13 @@ export default function Home() {
         filterValues={filterValues}
         setFilterValues={setFilterValues}
       />
-      {loading ? <p>Loading ...</p> : <MetaTable data={data} />}
+      {loading ? (
+        <p>Loading ...</p>
+      ) : (
+        <>
+          <MostPicked winDay={data.heroStats.winDay} />
+        </>
+      )}
     </Container>
   );
 }
