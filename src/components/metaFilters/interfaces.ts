@@ -4,12 +4,3 @@ export interface IFilterValues {
   regionIds: string[];
   gameModeIds: string[];
 }
-
-export interface IGameModeJson {
-  [key: string]: {
-    id: number;
-    name: string;
-    balanced?: boolean | undefined;
-    localized_name: string;
-  };
-}

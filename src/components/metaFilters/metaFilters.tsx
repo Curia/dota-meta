@@ -8,10 +8,8 @@ import positions from '@/constants/positions.json';
 import gameModes from '@/constants/gameModes.json';
 
 // Types
-import {
-  IFilterValues,
-  IGameModeJson,
-} from '@/components/metaFilters/interfaces';
+import { IFilterValues } from '@/components/metaFilters/interfaces';
+import { IGameModeJson } from '@/constants/interfaces';
 
 const MetaFilters: React.FC<{
   filterValues: IFilterValues;
