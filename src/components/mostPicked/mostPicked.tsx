@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import { Pill } from '@/components/pill';
-import { SimpleGrid, Heading, Image, Text } from '@chakra-ui/react';
+import { SimpleGrid, Heading, Text, Divider } from '@chakra-ui/react';
+import { Card } from '@/components/card';
 
 // Types
 import { HeroesMetaTrends_heroStats_winDay } from '@/apollo/__generated__/HeroesMetaTrends';
@@ -26,27 +26,23 @@ const MostPicked: React.FC<{ winDay: HeroesMetaTrends_heroStats_winDay[] }> = ({
   return (
     <>
       <Heading mb={3}>Most Picked</Heading>
-      <SimpleGrid minChildWidth="110px" spacing={3}>
+      <SimpleGrid columns={6} spacing={3}>
         {Array(10)
           .fill(1, 0)
           .map((v, i) => {
-            const {
-              heroId,
-              matchCount,
-              winCount,
-            }: {
-              heroId: number;
-              matchCount: number;
-              winCount: number;
-            } = sortedGamesPlayed[i];
+            const { heroId, matchCount, winCount } = sortedGamesPlayed[i];
             return (
-              <Pill key={heroId} href={`hero/${heroId}`}>
-                <Image src={`${STEAM_CDN}${HEROS[heroId].icon}`} mr="2" />
-                <Text>{winRate(winCount, matchCount)}%</Text>
-              </Pill>
+              <Card
+                image={`${STEAM_CDN}${HEROS[heroId].img}`}
+                href={`/hero/${HEROS[heroId]}`}
+              >
+                <Text>Winrate: {winRate(winCount, matchCount)}%</Text>
+                <Text>Games: {matchCount}</Text>
+              </Card>
             );
           })}
       </SimpleGrid>
+      <Divider my="3" />
     </>
   );
 };

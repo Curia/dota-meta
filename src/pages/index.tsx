@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { Container } from '@chakra-ui/react';
+
 // Queries
 import { HEROES_META_TREND } from '@/apollo/queries';
 
 // Components
+import { Container } from '@chakra-ui/react';
 import { MetaFilters } from '@/components/metaFilters';
-import { MetaTable } from '@/components/metaTable';
+import { CurrentMeta } from '@/components/currentMeta';
 import { MostPicked } from '@/components/mostPicked';
 
 // Types
@@ -34,6 +35,7 @@ export default function Home() {
       ) : (
         <>
           <MostPicked winDay={data.heroStats.winDay} />
+          <CurrentMeta winDay={data.heroStats.winDay} />
         </>
       )}
     </Container>
