@@ -9,11 +9,11 @@ import { HeroesMetaTrends_heroStats_winDay } from '@/apollo/__generated__/Heroes
 import { IHeroJson } from '@/constants/interfaces';
 
 // Utils
-import { formatTotalGames, winRate } from '@/utils';
+import { formatTotalGames, getWinRate } from '@/utils';
 
 // Constants
 import heroJson from '@/constants/heroes.json';
-import { STEAM_CDN } from '@/constants';
+import { STEAMCDN } from '@/constants';
 
 const HEROS: IHeroJson = heroJson;
 
@@ -33,10 +33,10 @@ const MostPicked: React.FC<{ winDay: HeroesMetaTrends_heroStats_winDay[] }> = ({
             const { heroId, matchCount, winCount } = sortedGamesPlayed[i];
             return (
               <Card
-                image={`${STEAM_CDN}${HEROS[heroId].img}`}
+                image={`${STEAMCDN}${HEROS[heroId].img}`}
                 href={`/hero/${HEROS[heroId]}`}
               >
-                <Text>Winrate: {winRate(winCount, matchCount)}%</Text>
+                <Text>Winrate: {getWinRate(winCount, matchCount)}%</Text>
                 <Text>Games: {matchCount}</Text>
               </Card>
             );

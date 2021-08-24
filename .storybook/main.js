@@ -1,5 +1,4 @@
 const path = require("path");
-
 const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
@@ -17,6 +16,8 @@ module.exports = {
           ...config.resolve.alias,
           "@emotion/core": toPath("node_modules/@emotion/react"),
           "emotion-theming": toPath("node_modules/@emotion/react"),
+          "@/constants": toPath("src/constants"),
+          "@/utils": toPath("src/utils")
         },
       },
     };

@@ -1,1 +1,1 @@
-export const STEAM_CDN = `https://steamcdn-a.akamaihd.net/`;
+export const STEAMCDN = `https://steamcdn-a.akamaihd.net/`;

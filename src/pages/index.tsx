@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 
 // Queries
+import { Container } from '@chakra-ui/react';
 import { HEROES_META_TREND } from '@/apollo/queries';
 
 // Components
-import { Container } from '@chakra-ui/react';
 import { MetaFilters } from '@/components/metaFilters';
 import { CurrentMeta } from '@/components/currentMeta';
 import { MostPicked } from '@/components/mostPicked';
